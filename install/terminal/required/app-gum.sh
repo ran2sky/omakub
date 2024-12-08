@@ -1,6 +1,6 @@
 # Gum is used for the Omakub commands for tailoring Omakub after the initial install
 cd /tmp
-GUM_VERSION="0.14.3"
+GUM_VERSION="0.14.5"
 ARCH=$(dpkg --print-architecture)
 echo "Installing Gum for architecture: $ARCH"
 # Use known good version
