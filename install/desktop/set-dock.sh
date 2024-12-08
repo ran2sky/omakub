@@ -5,7 +5,7 @@ apps=(
 	"Neovim.desktop"
 	"code.desktop"
 	"WhatsApp.desktop"
-	"signal-desktop.desktop"
+	# "signal-desktop.desktop"
 	"Zoom.desktop"
 	"spotify.desktop"
 	"steam.desktop"
