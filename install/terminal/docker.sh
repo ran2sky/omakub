@@ -12,4 +12,18 @@ sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin d
 sudo usermod -aG docker ${USER}
 
 # Limit log size and add registry mirror
-echo '{"log-driver":"json-file","log-opts":{"max-size":"10m","max-file":"5"},"registry-mirrors":["https://hammal.iwliw.com"]}' | sudo tee /etc/docker/daemon.json
+cat << 'EOF' | sudo tee /etc/docker/daemon.json
+{
+  "registry-mirrors": [
+    "https://hammal.iwliw.com"
+  ],
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "10m",
+    "max-file": "5"
+  }
+}
+EOF
+
+# Restart Docker
+sudo systemctl restart docker
